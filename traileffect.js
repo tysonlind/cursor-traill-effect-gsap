@@ -22,7 +22,10 @@ window.addEventListener('click', (event) => {
     pulse.setAttribute('cx', event.clientX);
     pulse.setAttribute('cy', event.clientY);
     pulse.setAttribute('r', 0);
-    pulse.setAttribute('fill', 'rgba(0, 150, 255, 0.5)');
+    let randomRed = Math.floor(Math.random() * 255);
+    let randomGreen = Math.floor(Math.random() * 255);
+    let randomBlue = Math.floor(Math.random() * 255);
+    pulse.setAttribute('fill', `rgba(${randomRed}, ${randomGreen}, ${randomBlue}, 0.5)`);
 
     pulseSvg.appendChild(pulse);
 
