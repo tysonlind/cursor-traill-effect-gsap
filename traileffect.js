@@ -17,14 +17,14 @@ window.addEventListener('mousemove', (e) => {
     });
 });
 
-window.addEventListener('click', (event) => {
+window.addEventListener('click', (e) => {
     const pulse = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-    pulse.setAttribute('cx', event.clientX);
-    pulse.setAttribute('cy', event.clientY);
+    pulse.setAttribute('cx', e.clientX);
+    pulse.setAttribute('cy', e.clientY);
     pulse.setAttribute('r', 0);
-    let randomRed = Math.floor(Math.random() * 255);
-    let randomGreen = Math.floor(Math.random() * 255);
-    let randomBlue = Math.floor(Math.random() * 255);
+    let randomRed = Math.floor(Math.random() * 155 + 100);
+    let randomGreen = Math.floor(Math.random() * 155 + 100);
+    let randomBlue = Math.floor(Math.random() * 155 + 100);
     pulse.setAttribute('fill', `rgba(${randomRed}, ${randomGreen}, ${randomBlue}, 0.5)`);
 
     pulseSvg.appendChild(pulse);
