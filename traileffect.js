@@ -30,7 +30,7 @@ window.addEventListener('click', (e) => {
     pulseSvg.appendChild(pulse);
 
     gsap.to(pulse, {
-        attr: { r: 50 },
+        attr: { r: 75 },
         opacity: 0,
         duration: 1,
         ease: "power2.out",
