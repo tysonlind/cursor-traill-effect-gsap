@@ -60,9 +60,14 @@ path {
     margin-left: -590px;
 }
 
-.on-load-fade-in {
+.fade-in-from-right {
     animation: fadeInFromRight 2s;
+
 }
+.fade-in-from-left {
+    animation: fadeInFromLeft 2s;
+}
+
 
 /* Make the SVGs different sizes */
 .first {
@@ -112,6 +117,17 @@ path {
 @keyframes fadeInFromRight {
     0% {
         transform: translateX(500px);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInFromLeft {
+    0% {
+        transform: translateX(-500px);
         opacity: 0;
     }
     100% {
