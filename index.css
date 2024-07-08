@@ -15,9 +15,6 @@ path {
     fill: none;
     stroke-linecap: round;
     stroke-linejoin: round;
-    -moz-box-shadow: -5px -5px 5px #888;
-    -webkit-box-shadow: -5px -5px 5px #888;
-    box-shadow: -5px -5px 5px #888;
 }
 
 .first {

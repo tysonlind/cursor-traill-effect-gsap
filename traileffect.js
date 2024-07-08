@@ -9,7 +9,7 @@ window.addEventListener('mousemove', (e) => {
     gsap.to(smoothPointer, {
         x: e.clientX,
         y: e.clientY,
-        duration: 0.5,
+        duration: 0.3,
         ease: "power2.out"
     });
 });
