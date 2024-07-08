@@ -1,4 +1,7 @@
 const trails = document.querySelectorAll('.trail');
+const pulseSvg = document.getElementById('pulse-svg');
+
+
 const smoothPointer = {
     x: window.innerWidth / 2,
     y: window.innerHeight / 2
@@ -11,6 +14,26 @@ window.addEventListener('mousemove', (e) => {
         y: e.clientY,
         duration: 0.3,
         ease: "power2.out"
+    });
+});
+
+window.addEventListener('click', (event) => {
+    const pulse = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    pulse.setAttribute('cx', event.clientX);
+    pulse.setAttribute('cy', event.clientY);
+    pulse.setAttribute('r', 0);
+    pulse.setAttribute('fill', 'rgba(0, 150, 255, 0.5)');
+
+    pulseSvg.appendChild(pulse);
+
+    gsap.to(pulse, {
+        attr: { r: 50 },
+        opacity: 0,
+        duration: 1,
+        ease: "power2.out",
+        onComplete: () => {
+            pulse.remove();
+        }
     });
 });
 
