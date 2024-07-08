@@ -1,5 +1,5 @@
 body {
-	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #d5c023);
+	background: linear-gradient(-45deg, #000000, #7c0935, #097ba5, #9d8b05);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 	height: 100vh;
@@ -28,13 +28,18 @@ path {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.light-text {
+    color: #fff;
+}
+
 .gradient-text {
     color: none;
-    background: linear-gradient(-45deg, #000000, #5900ff, #00bbff, #e1dbaa);
+    background: linear-gradient(-45deg, #f7f5f5, #5900ff, #00bbff, #d820b0);
     background-size: 400% 400%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: gradient 15s ease infinite;
+    animation: gradient 10s ease infinite;
+    font-size:  3em;
 }
 
 /* Make the SVGs different sizes */
